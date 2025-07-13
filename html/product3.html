@@ -51,7 +51,7 @@
       <a href="Products.html">Click to return to Products page</a>
     </div>
     <!-- Hidden div for thank you message -->
-    <div class="hidden-div" id="thankYouDiv">
+    <div class="hidden-div" id="thankYouDiv" style="display: none !important;">
       <div class="thank-you-card">
         <!-- Close button for thank you message -->
         <button class="close-button-thank-you" onclick="closeThankYouDiv()">
@@ -64,7 +64,7 @@
     </div>
 
     <!-- Hidden div for shopping cart message -->
-    <div class="hidden-div" id="shopping-cart">
+    <div class="hidden-div" id="shopping-cart" style="display: none !important;">
       <div class="shopping-cart">
         <!-- Close button for shopping cart message -->
         <button
@@ -81,7 +81,24 @@
 
     <script>
       // Ensure divs are hidden when page loads
-      window.addEventListener('DOMContentLoaded', function() {
+      // Immediately hide divs when script loads
+      (function() {
+        var thankYouDiv = document.getElementById("thankYouDiv");
+        var shoppingCartDiv = document.getElementById("shopping-cart");
+        if (thankYouDiv) thankYouDiv.style.display = "none";
+        if (shoppingCartDiv) shoppingCartDiv.style.display = "none";
+      })();
+
+      // Also hide divs when DOM is ready
+      window.addEventListener("DOMContentLoaded", function() {
+        var thankYouDiv = document.getElementById("thankYouDiv");
+        var shoppingCartDiv = document.getElementById("shopping-cart");
+        if (thankYouDiv) thankYouDiv.style.display = "none";
+        if (shoppingCartDiv) shoppingCartDiv.style.display = "none";
+      });
+
+      // And hide divs when window loads
+      window.addEventListener("load", function() {
         var thankYouDiv = document.getElementById("thankYouDiv");
         var shoppingCartDiv = document.getElementById("shopping-cart");
         if (thankYouDiv) thankYouDiv.style.display = "none";
