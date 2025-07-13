@@ -80,6 +80,15 @@
     </div>
 
     <script>
+      // Ensure divs are hidden when page loads
+      window.onload = function() {
+        var thankYouDiv = document.getElementById("thankYouDiv");
+        var shoppingCartDiv = document.getElementById("shopping-cart");
+        if (thankYouDiv) thankYouDiv.style.display = "none";
+        if (shoppingCartDiv) shoppingCartDiv.style.display = "none";
+      };
+
+
       var images = [
         "../images/printer4.png",
         "../images/printer4(2).png",

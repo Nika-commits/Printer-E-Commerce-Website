@@ -162,13 +162,14 @@ h5 {
 
   /* Hidden div styling for thank you card */
   .hidden-div {
-    display: none;
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
   }
   
   /* Thank you card styling */
@@ -178,10 +179,17 @@ h5 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
   }
   
   /* Close button styling for thank you card */
-  .close-button {
+  .close-button,
+  .close-button-thank-you,
+  .close-button-shopping-cart {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -190,6 +198,7 @@ h5 {
     font-size: 20px;
     cursor: pointer;
     color: #333;
+    z-index: 1001;
   }
   
   /* Shopping cart styling */
@@ -199,6 +208,11 @@ h5 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
   }
   
   /* Container for buy and add to cart button */

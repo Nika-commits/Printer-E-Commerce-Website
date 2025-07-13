@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brother HL-12380DW</title>
-    <link rel="stylesheet" href="../CSS/style2.css" />
-    <link rel="stylesheet" href="/css/stylesss.css">
+    <link rel="stylesheet" href="../css/style2.css" />
+    <link rel="stylesheet" href="../css/stylesss.css">
   </head>
   <body background="../images/background.png">
     <!-- Product gallery -->
@@ -81,6 +81,23 @@
     </div>
 
     <script>
+      // Ensure divs are hidden when page loads
+      window.onload = function() {
+        var thankYouDiv = document.getElementById("thankYouDiv");
+        var shoppingCartDiv = document.getElementById("shopping-cart");
+        if (thankYouDiv) thankYouDiv.style.display = "none";
+        if (shoppingCartDiv) shoppingCartDiv.style.display = "none";
+      };
+
+
+      // Ensure divs are hidden when page loads
+      window.onload = function() {
+        var thankYouDiv = document.getElementById("thankYouDiv");
+        var shoppingCartDiv = document.getElementById("shopping-cart");
+        if (thankYouDiv) thankYouDiv.style.display = "none";
+        if (shoppingCartDiv) shoppingCartDiv.style.display = "none";
+      };
+
       var images = [
         "../images/printer1.png",
         "../images/printer1(2).png",
